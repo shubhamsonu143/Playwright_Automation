@@ -1,7 +1,8 @@
 const { test, expect } = require('@playwright/test');
-const RegisterPage = require("../Pages/Registerpage")
-const LoginPage = require("../Pages/Loginpage")
-
+// const RegisterPage = require("../Pages/Registerpage");
+// const LoginPage = require("../Pages/Loginpage");
+const Pre_Execution = require("../tests/Pre_Executions");
+const json = JSON.parse(JSON.stringify(require("../testdata.json")));
 
 test('Register Page Using POM', async ({ page },testInfo) => {
 
@@ -14,13 +15,15 @@ test('Register Page Using POM', async ({ page },testInfo) => {
 
     // const RegisterationPage = new RegisterPage(page);
 
-    const RegisterationPage = new RegisterPage(page);
+    // const RegisterationPage = new RegisterPage(page);
+
+    const RegisterationPage = new Pre_Execution(page);
 
     await RegisterationPage.RegistrationPage();
 
-    const Loginpage = new LoginPage(page);
+    const Loginscreen = new Pre_Execution(page);
 
-    await Loginpage.LoginToThePage();
+    await Loginscreen.LogintothePage();
 
     
 
