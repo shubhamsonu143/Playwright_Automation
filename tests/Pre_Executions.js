@@ -1,6 +1,6 @@
-const LoginPage = require("../Pages/Loginpage");
-
-const json = JSON.parse(JSON.stringify(require("../testdata.json")));
+const LoginPage = require("../Pages/Loginpage"),
+testaData = require("../testdata.json"),
+json = JSON.parse(JSON.stringify(testaData));
 
 class Pre_Execution extends LoginPage {
 
@@ -64,10 +64,10 @@ async RegistrationPage()
         
         async LogintothePage(){
 
-            await this.page.fill(this.Email,"shubham050396@gmail.com")
-            await this.page.fill(this.Password,"Shubham@143")
+            await this.page.fill(this.Email,json.loginEmail)
+            await this.page.fill(this.Password,json.loginPass)
             await this.page.click(this.LoginButton)
-            await this.page.fill(this.SearchBox,"Samsung")
+            await this.page.fill(this.SearchBox,json.searchproduct)
         
         }
         
