@@ -8,6 +8,14 @@
     "cPass":"Shubham@143",
     "loginEmail":"shubham050396@gmail.com",
     "loginPass":"Shubham@143",
-    "searchproduct":"Samsung"
+    "searchproduct":"Samsung",
+    "Fname1" : "test",
+    "Lname" : "New",
+    "company" : "Novac technology solution",
+    "address" : "Chennai",
+    "city" : "Chennai",
+    "postCode" : "612002",
+    "Country" : "Afghanistan",
+    "Region" : "Badakhshan"
 }
 

@@ -68,6 +68,13 @@ async RegistrationPage()
             await this.page.fill(this.Password,json.loginPass)
             await this.page.click(this.LoginButton)
             await this.page.fill(this.SearchBox,json.searchproduct)
+            await this.page.click(this.searchBtn)
+            await this.page.click(this.ClickSamsung)
+            await this.page.click(this.AddCart )
+            await this.page.click(this.CartIcon )
+            await this.page.locator(this.Checkout).waitFor({ state: 'visible' });
+            await this.page.click(this.Checkout)
+
         
         }
         
