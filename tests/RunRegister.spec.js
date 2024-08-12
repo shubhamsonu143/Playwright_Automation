@@ -1,7 +1,5 @@
 const { test, expect } = require('@playwright/test'),
 Pre_Execution = require("../tests/Pre_Executions");
-// testaData = require("../testdata.json"),
-// json = JSON.parse(JSON.stringify(testaData));
 
 test('Register Page Using POM', async ({ page },testInfo) => {
 

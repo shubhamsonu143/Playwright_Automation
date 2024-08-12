@@ -11,6 +11,9 @@ class RegisterPage
         this.Confirmpassword="[id='input-confirm']"
         this.checkbox="[class='custom-control custom-checkbox custom-control-inline']"
         this.Continue="[class='btn btn-primary']"
+        this.RegContinue ="//div[@class='buttons mb-4']"
+        this.SearchBox = "(//input[@name='search'])[1]";
+
     }
 
     

@@ -41,13 +41,14 @@ async RegistrationPage()
 
                     await element2.click();
                     
+                    await this.LogintothePage();
 
                 } else {
 
                 console.log("Redirection Failed");
 
                 }
-                }catch (error) {
+            }catch (error) {
 
                 console.log("Error element not found");
 
@@ -62,12 +63,40 @@ async RegistrationPage()
             }
         }   
         
-        async LogintothePage(){
-
-            await this.page.fill(this.Email,json.loginEmail)
-            await this.page.fill(this.Password,json.loginPass)
-            await this.page.click(this.LoginButton)
-            await this.page.fill(this.SearchBox,json.searchproduct)
+        async LogintothePage() {
+            try {
+                const Myacc = await this.page.waitForSelector("//a[@class='btn btn-primary']");
+    
+                if (Myacc) {
+                    const textContent = await Myacc.textContent();
+                    // textContent.click();
+                    expect(textContent).toContain("Continue");
+                    console.log("Already Logged In. Skipping Login Process.");
+                } else {
+                    console.log("Not Logged In. Performing Login.");
+    
+                    await this.page.waitForSelector(this.Email, { state: 'visible' });
+                    await this.page.fill(this.Email, json.loginEmail);
+                    await this.page.fill(this.Password, json.loginPass);
+                    await this.page.click(this.LoginButton);
+                }
+    
+                await this.page.waitForSelector(this.SearchBox, { state: 'visible' });
+                const regcompleted = await this.page.$(this.SearchBox);
+    
+                if (regcompleted) {
+                    console.log("Registration Completed Successfully.");
+                    await Myacc.click();
+                    await this.page.type(this.SearchBox,json.searchproduct);
+                    this.page.click(this.SelectProduct,{state:'visible'});
+                    await this.page.click(this.AddtoCart);
+                    await this.page.click(this.ViewCart);
+                } else {
+                    console.log("Registration Not Completed.");
+                }
+            } catch (error) {
+                console.log("Error during login or registration: ", error);
+            }
         
         }
         
