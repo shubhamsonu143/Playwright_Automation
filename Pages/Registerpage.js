@@ -12,16 +12,16 @@ class RegisterPage
         this.checkbox="[class='custom-control custom-checkbox custom-control-inline']"
         this.Continue="[class='btn btn-primary']"
         this.RegContinue ="//div[@class='buttons mb-4']"
-        this.SearchBox = "(//input[@name='search'])[1]";
+        this.Continue="//input[@class='btn btn-primary']"
+        // this.SearchBox = "(//input[@name='search'])[1]";
 
     }
 
     
-        
-
-
+    
        
 }
+
 
 
 

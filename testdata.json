@@ -2,13 +2,25 @@
 
     "Fname":"Shubham",
     "Lname":"Rajendra",
-    "emailID":"shubhamrajendra18@gmail.com",
+    "emailID":"shubhamrajendra2031@gmail.com",
     "phoneNum":"8801439142",
     "pass":"Shubham@143",
     "cPass":"Shubham@143",
     "RSearch":"Samsung",
     "loginEmail":"shubham050396@gmail.com",
     "loginPass":"Shubham@143",
-    "searchproduct":"Samsung"
+    "searchproduct":"Samsung",
+    "AddressFname":"Shubham",
+    "AddressLname":"Rajendra",
+    "Address1":"295",
+    "Address2":"MM Puram UPM",
+    "city":"Chennai",
+    "pincode":"603210",
+    "country":"India",
+    "region":"Tamil Nadu"
+    
+
+
+
 }
 
